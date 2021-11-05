@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, Image, TextInput, View, ScrollView, TouchableOpacity, ImageBackground ,FlatList } from 'react-native';
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons,AntDesign } from "@expo/vector-icons";
 import * as Animatable from 'react-native-animatable';
 
 const home = () => {
@@ -10,20 +10,21 @@ const home = () => {
         <View style={styles.mainContainer}>
 
 
-<View style={styles.container}>
+<ImageBackground style={styles.container} source={require("./../assets/background.jpg")}>
 
-  <View style={{ backgroundColor: '#F8F8F8', paddingTop: 45, marginBottom: 30 }}>
+  <View style={{ backgroundColor: 'transparent', paddingTop: 45, marginBottom: 30 }}>
 
       <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
         <View>
           <View style={styles.view3}>
+            <Image style={styles.img} source={require("./../assets/cake.png")} />
             <Text style={styles.text2}>Lormy's</Text>
             <Text style={styles.text3}>Confectionery</Text>
           </View>
 
         </View>
-        <Ionicons name="person-outline" size={26} color="black" onPress={() => {
-          navigation.navigate("Home") }} />
+        <Ionicons name="ios-person-circle-sharp" size={24} color="black"  onPress={() => {navigation.navigate("Home") }}/>
+
       </View>
   </View>
 
@@ -194,7 +195,7 @@ const home = () => {
     </View>
   </View>
 
-</View>
+</ImageBackground>
 
 </View>
         </View>
@@ -208,6 +209,11 @@ const styles = StyleSheet.create({
     imageBackground: {
         flex: 1,
         alignItems: 'center'
+      },
+
+      img:{
+        width:25,
+        height:35,
       },
         image: {
             width: 70,
@@ -280,11 +286,11 @@ const styles = StyleSheet.create({
         height: '100%',
       },
       button1Text: {
-        color: `#02c38e`,
+        color: `black`,
         fontSize: 22,
       },
       button2Text: {
-        color: 'gray',
+        color: 'black',
         fontSize: 22,
       },
       imageStyle: {
