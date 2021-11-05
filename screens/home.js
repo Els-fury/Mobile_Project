@@ -14,7 +14,7 @@ const home = () => {
 
   <View style={{ backgroundColor: '#F8F8F8', paddingTop: 45, marginBottom: 30 }}>
 
-      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+      <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
         <View>
           <View style={styles.view3}>
             <Text style={styles.text2}>Lormy's</Text>
@@ -29,7 +29,7 @@ const home = () => {
 
 
 
-  <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: 370, marginBottom: 20 }}>
+  <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', width: 370, marginBottom: 20 }}>
 
     <Text style={styles.button1Text}>All</Text>
 
@@ -46,7 +46,7 @@ const home = () => {
 
   <ScrollView vertical={true} showsVerticalScrollIndicator={false}>
     <Animatable.View animation="slideInDown" style={{ height: 1000 }}>
-      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-between', marginBottom: 15 }}>
+      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 15 }}>
         <TouchableOpacity style={styles.productview1} onPress={() => { navigation.navigate("ProductData") }}>
           <Image style={styles.image} source={require("./../assets/IMG1.jpg")}/>
 
@@ -67,7 +67,7 @@ const home = () => {
         </TouchableOpacity>
       </View>
 
-      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-between', marginBottom: 15 }}>
+      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 15 }}>
         <TouchableOpacity style={styles.productview1}>
           <Image style={styles.image} source={require("./../assets/IMG3.jpg")}/>
 
@@ -88,7 +88,7 @@ const home = () => {
         </TouchableOpacity>
       </View>
 
-      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-between', marginBottom: 20 }}>
+      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 20 }}>
         <TouchableOpacity style={styles.productview1}>
           <Image style={styles.image} source={require("./../assets/IMG5.jpg")}/>
 
@@ -110,7 +110,7 @@ const home = () => {
         </TouchableOpacity>
 
       </View>
-      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-between', marginBottom: 15 }}>
+      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 15 }}>
         <TouchableOpacity style={styles.productview1}>
           <Image style={styles.image} source={require("./../assets/IMG7.jpg")}/>
 
@@ -133,7 +133,7 @@ const home = () => {
 
 </View>
 
-      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-between' }}>
+      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 15 }}>
         <TouchableOpacity style={styles.productview1}>
           <Image style={styles.image} source={require("./../assets/IMG9.jpg")}/>
 
@@ -154,29 +154,9 @@ const home = () => {
           </View>
         </TouchableOpacity>
     </View>       
-      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-between' }}>
-        <TouchableOpacity style={styles.productview1}>
-          <Image style={styles.image} source={require("./../assets/IMG11.jpg")}/>
+     
 
-          <View style={{ top: 0, alignItems: 'center' }}>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>CARROT CAKE</Text>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }} onPress={() => {
-              navigation.navigate("ProductData")  }}>PANCAKE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>119</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.productview2}>
-          <Image style={styles.image} source={require("./../assets/IMG12.jpg")}/>
-
-          <View style={{ top: 0, alignItems: 'center' }}>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>TOASTED-OATS</Text>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>PANCAKE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>60</Text>
-          </View>
-        </TouchableOpacity>
-    </View>       
-
-    <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-between' }}>
+    <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-around' , marginBottom: 15}}>
         <TouchableOpacity style={styles.productview1}>
           <Image style={styles.image} source={require("./../assets/IMG13.jpg")}/>
 
@@ -195,76 +175,8 @@ const home = () => {
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>CROISSANT</Text>
             <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>60</Text>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> 
     </View>       
-
-    <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-between' }}>
-        <TouchableOpacity style={styles.productview1}>
-          <Image style={styles.image} source={require("./../assets/IMG15.jpg")}/>
-
-          <View style={{ top: 0, alignItems: 'center' }}>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>CHOCOLATE</Text>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }} onPress={() => {
-              navigation.navigate("ProductData")  }}>WAFFLE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>119</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.productview2}>
-          <Image style={styles.image} source={require("./../assets/IMG16.jpg")}/>
-
-          <View style={{ top: 0, alignItems: 'center' }}>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>STRAWBERRY</Text>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>WAFFLE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>60</Text>
-          </View>
-        </TouchableOpacity>
-    </View>       
-    <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-between' }}>
-        <TouchableOpacity style={styles.productview1}>
-          <Image style={styles.image} source={require("./../assets/IMG17.jpg")}/>
-
-          <View style={{ top: 0, alignItems: 'center' }}>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>GINGER-BREAD</Text>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }} onPress={() => {
-              navigation.navigate("ProductData")  }}>WAFFLE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>119</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.productview2}>
-          <Image style={styles.image} source={require("./../assets/IMG18.jpg")}/>
-
-          <View style={{ top: 0, alignItems: 'center' }}>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>RED-VELVET</Text>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>WAFFLE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>60</Text>
-          </View>
-        </TouchableOpacity>
-    </View>       
-    
-    <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-between' }}>
-        <TouchableOpacity style={styles.productview1}>
-          <Image style={styles.image} source={require("./../assets/IMG19.jpg")}/>
-
-          <View style={{ top: 0, alignItems: 'center' }}>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>POMEGRANATE</Text>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }} onPress={() => {
-              navigation.navigate("ProductData")  }}>ICE CREAM</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>119</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.productview2}>
-          <Image style={styles.image} source={require("./../assets/IMG20.jpg")}/>
-
-          <View style={{ top: 0, alignItems: 'center' }}>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>VANILLA</Text>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>ICE CREAM</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>60</Text>
-          </View>
-        </TouchableOpacity>
-    </View>       
-
-
-       
 
     </Animatable.View>
   </ScrollView>
@@ -275,7 +187,7 @@ const home = () => {
     <Ionicons name="home-outline" size={26} color="black" onPress={() => {
       navigation.navigate("ProductData")
     }} />
-    <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+    <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
       <Ionicons name="cart-outline" size={26} color="black" onPress={() => {
         navigation.navigate("Cart")
       }} />
@@ -354,7 +266,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 20,
-        width: '47%',
+        width:"40%",
         height: '100%',
         marginRight: 5,
       },
@@ -364,7 +276,7 @@ const styles = StyleSheet.create({
         padding: 10,
         alignItems: 'center',
         borderRadius: 20,
-        width: '47%',
+        width:"40%",
         height: '100%',
       },
       button1Text: {
