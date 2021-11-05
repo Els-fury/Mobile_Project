@@ -9,23 +9,39 @@ import {
   TextInput,
   Button,
   TouchableOpacity,
+  ImageBackground
 } from "react-native";
 import { screensEnabled } from "react-native-screens";
 
 export default function login({navigation}) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={require("./../assets/cake.png")} />
+  const [email, setEmail] = useState(0);
+  const [password, setPassword] = useState(0);
 
+  const checkInput = (string) =>
+  {
+    if(typeof(email) !== "string") {
+      alert('Please enter email');
+      return;
+    }
+    if(typeof(password) !== "string") {
+      alert('Please enter password');
+      return;
+    }
+    else {
+      navigation.navigate('Home');
+    }
+  };
+
+  return (
+    <ImageBackground style={styles.imageBackground} source={require("./../assets/welcome backdropjpg.jpg")}>
+    <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
           placeholder="Email."
           placeholderTextColor="#808080"
-          onChangeText={(email) => setEmail(email)}
+          onChangeText={(value) => setEmail(value)}
         />
       </View>
 
@@ -35,7 +51,7 @@ export default function login({navigation}) {
           placeholder="Password."
           placeholderTextColor="#808080"
           secureTextEntry={true}
-          onChangeText={(password) => setPassword(password)}
+          onChangeText={(value) => setPassword(value)}
         />
       </View>
 
@@ -43,31 +59,32 @@ export default function login({navigation}) {
         <Text style={styles.forgot_button}>Forgot Password?</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.loginBtn} onPress={()=>navigation.navigate("Home")}>
+      <TouchableOpacity style={styles.loginBtn} onPress={checkInput}>
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
     </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
+    width: "80%",
+    margin: 20,
     alignItems: "center",
-    justifyContent: "center",
   },
 
-  image: {
-    marginBottom: 40,
-    width: 100,
-    height: 125,
+
+  imageBackground: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center'
   },
 
   inputView: {
     backgroundColor: "#66b2ff",
     borderRadius: 30,
-    width: "70%",
+    width: "100%",
     height: 45,
     marginBottom: 20,
 
@@ -93,7 +110,8 @@ const styles = StyleSheet.create({
     height: 50,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 40,
+    marginTop: 10,
+    marginBottom: 30,
     backgroundColor: "#66b2ff",
   },
 

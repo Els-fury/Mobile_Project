@@ -9,6 +9,7 @@ import {
   TextInput,
   Button,
   TouchableOpacity,
+  ImageBackground
 } from "react-native";
 import { screensEnabled } from "react-native-screens";
 
@@ -16,9 +17,8 @@ export default function signup({navigation}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
+    <ImageBackground style={styles.imageBackground} source={require("./../assets/welcome backdropjpg.jpg")}>
     <View style={styles.container}>
-      <Image style={styles.image} source={require("./../assets/cake.png")} />
-
       <StatusBar style="auto" />
       <View style={styles.inputView}>
         <TextInput
@@ -61,23 +61,23 @@ export default function signup({navigation}) {
         <Text style={styles.loginText}>REGISTER</Text>
       </TouchableOpacity>
     </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    width: "100%",
   },
 
-  image: { 
-    marginBottom: 40,
-    width: 100,
-    height: 125,
+ 
+  imageBackground: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center'
   },
-
   inputView: {
     backgroundColor: "#66b2ff",
     borderRadius: 30,
@@ -109,6 +109,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 40,
     backgroundColor: "#66b2ff",
+    marginBottom:20,
   },
 
   loginText:{
