@@ -57,13 +57,13 @@ const home = () => {
                 <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: `#02c38e` }}>$</Text>85</Text>
             </View>
         </TouchableOpacity>
-      </View>
+        </View>
 
-      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 15 }}>
+        <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 15 }}>
         <TouchableOpacity style={styles.productview1}>
           <Image style={styles.image} source={require("./../assets/IMG3.jpg")}/>
 
-      <View style={{ top: 0, alignItems: 'center' }}>
+        <View style={{ top: 0, alignItems: 'center' }}>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>VANILLA</Text>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>CAKE</Text>
             <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: `#02c38e` }}>$</Text>70</Text>
@@ -77,10 +77,10 @@ const home = () => {
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>CUPCAKE</Text>
             <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>25</Text>
           </View>
-        </TouchableOpacity>
-      </View>
+          </TouchableOpacity>
+          </View>
 
-      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 20 }}>
+        <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 20 }}>
         <TouchableOpacity style={styles.productview1}>
           <Image style={styles.image} source={require("./../assets/IMG5.jpg")}/>
 
@@ -90,7 +90,7 @@ const home = () => {
               navigation.navigate("ProductData") }}>CUPCAKE</Text>
             <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>36</Text>
           </View>
-        </TouchableOpacity>
+          </TouchableOpacity>
         <TouchableOpacity style={styles.productview2}>
           <Image style={styles.image} source={require("./../assets/IMG6.jpg")}/>
 
@@ -101,8 +101,8 @@ const home = () => {
           </View>
         </TouchableOpacity>
 
-      </View>
-      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 15 }}>
+        </View>
+        <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 15 }}>
         <TouchableOpacity style={styles.productview1}>
           <Image style={styles.image} source={require("./../assets/IMG7.jpg")}/>
 
@@ -123,9 +123,9 @@ const home = () => {
           </View>
         </TouchableOpacity>
 
-</View>
+        </View>
 
-      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 15 }}>
+        <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 15 }}>
         <TouchableOpacity style={styles.productview1}>
           <Image style={styles.image} source={require("./../assets/IMG9.jpg")}/>
 
@@ -145,10 +145,10 @@ const home = () => {
             <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>5</Text>
           </View>
         </TouchableOpacity>
-    </View>       
+        </View>       
      
 
-    <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-around' , marginBottom: 15}}>
+        <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-around' , marginBottom: 15}}>
         <TouchableOpacity style={styles.productview1}>
           <Image style={styles.image} source={require("./../assets/IMG13.jpg")}/>
 
@@ -158,8 +158,8 @@ const home = () => {
               navigation.navigate("ProductData")  }}>CROISSANT</Text>
             <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>10</Text>
           </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.productview2}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.productview2}>
           <Image style={styles.image} source={require("./../assets/IMG14.jpg")}/>
 
           <View style={{ top: 0, alignItems: 'center' }}>
@@ -167,29 +167,23 @@ const home = () => {
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>CROISSANT</Text>
             <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>15</Text>
           </View>
-        </TouchableOpacity> 
-    </View>       
+         </TouchableOpacity> 
+           </View>       
 
-    </Animatable.View>
-  </ScrollView>
-  <View style={styles.iconView}>
-    <Ionicons name="settings-outline" size={26} color="black" onPress={() => {
-      navigation.navigate("Login")
-    }} />
-    <Ionicons name="home-outline" size={26} color="black" onPress={() => {
-      navigation.navigate("ProductData")
-    }} />
-    <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
-      <Ionicons name="cart-outline" size={26} color="black" onPress={() => {
-        navigation.navigate("Cart")
-      }} />
-    </View>
-  </View>
+          </Animatable.View>
+          </ScrollView>
+            <View style={styles.iconView}>
+              <Ionicons name="settings-outline" size={26} color="black" onPress={() => {navigation.navigate("Login")}} />
+                <Ionicons name="home-outline" size={26} color="black" onPress={() => {navigation.navigate("ProductData")  }} />
+                  <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
+                <Ionicons name="cart-outline" size={26} color="black" onPress={() => {navigation.navigate("Cart") }} />
+            </View>
+            </View>
 
-            </ImageBackground>
+         </ImageBackground>
         </SafeAreaView>
         
-    )
+  )
 }
 
 export default home
@@ -303,20 +297,3 @@ const styles = StyleSheet.create({
         borderRadius: 12,
       },  
 })
-
-
-
-// export default function Home(params) {
-//   const navigation = params.navigation;
-
-//   return (
-
-    
-
-//   );
-
-// }
-
-// const styles = StyleSheet.create({
- 
-// });

@@ -34,7 +34,7 @@ export default function login({navigation}) {
   };
 
   return (
-    <ImageBackground style={styles.imageBackground} source={require("./../assets/welcome backdropjpg.jpg")}>
+    <ImageBackground style={styles.imageBackground} source={require("./../assets/splash.jpg")}>
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.inputView}>
@@ -42,7 +42,7 @@ export default function login({navigation}) {
         <TextInput
           style={styles.TextInput}
           placeholder="Email."
-          placeholderTextColor="#808080"
+          placeholderTextColor="black"
           onChangeText={(value) => setEmail(value)}
         />
       </View>
@@ -52,7 +52,7 @@ export default function login({navigation}) {
         <TextInput
           style={styles.TextInput}
           placeholder="Password."
-          placeholderTextColor="#808080"
+          placeholderTextColor='black'
           secureTextEntry={true}
           onChangeText={(value) => setPassword(value)}
         />
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   },
 
   loginText:{
-      color: "#808080"
+      color: "#111"
   }
 
 });

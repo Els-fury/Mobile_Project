@@ -11,13 +11,12 @@ import {
   TouchableOpacity,
   ImageBackground
 } from "react-native";
-import { screensEnabled } from "react-native-screens";
 
 export default function signup({navigation}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
-    <ImageBackground style={styles.imageBackground} source={require("./../assets/welcome backdropjpg.jpg")}>
+    <ImageBackground style={styles.imageBackground} source={require("./../assets/splash.jpg")}>
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.inputView}>

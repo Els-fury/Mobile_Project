@@ -3,7 +3,7 @@ import { StyleSheet, Text, View , Image, TouchableOpacity, ImageBackground} from
 
 const splash_start = ({navigation}) => {
     return (
-        <ImageBackground style={styles.imageBackground} source={require("./../assets/welcome backdropjpg.jpg")}>
+        <ImageBackground style={styles.imageBackground} source={require("./../assets/splash.jpg")}>
             <View style={styles.container}>
                 <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate("Login")}>
                     <Text style={styles.loginText}>LOGIN</Text>
