@@ -2,69 +2,60 @@ import React from 'react'
 import { StyleSheet, Text, Image, TextInput, View, ScrollView, TouchableOpacity, ImageBackground ,FlatList } from 'react-native';
 import { Ionicons,AntDesign } from "@expo/vector-icons";
 import * as Animatable from 'react-native-animatable';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const home = () => {
     return (
-        <ImageBackground style={styles.imageBackground} source={require("./../assets/background.jpg")}>
-        <View>
-        <View style={styles.mainContainer}>
+        
+        <SafeAreaView style={styles.mainContainer}>
+            <ImageBackground style={{height: "100%"}} source={require("./../assets/background.jpg")}>
 
+        <View style={{ backgroundColor: 'transparent', paddingTop: 45, marginBottom: 30 }}>
 
-<ImageBackground style={styles.container} source={require("./../assets/background.jpg")}>
+            <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
+                <View>
+                    <View style={styles.view3}>
+                        <Image style={styles.img} source={require("./../assets/cake.png")} />
+                        <Text style={styles.text2}>Lormy's</Text>
+                         <Text style={styles.text3}>Confectionery</Text>
+                    </View>
 
-  <View style={{ backgroundColor: 'transparent', paddingTop: 45, marginBottom: 30 }}>
-
-      <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
-        <View>
-          <View style={styles.view3}>
-            <Image style={styles.img} source={require("./../assets/cake.png")} />
-            <Text style={styles.text2}>Lormy's</Text>
-            <Text style={styles.text3}>Confectionery</Text>
-          </View>
-
+                 </View>
+                    <Ionicons name="ios-person-circle-sharp" size={24} color="black"  onPress={() => {navigation.navigate("Home") }}/>
+            </View>
         </View>
-        <Ionicons name="ios-person-circle-sharp" size={24} color="black"  onPress={() => {navigation.navigate("Home") }}/>
-
-      </View>
-  </View>
 
 
 
-  <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', width: 370, marginBottom: 20 }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', width: 370, marginBottom: 20 }}>
 
-    <Text style={styles.button1Text}>All</Text>
+            <Text style={styles.button1Text}>All</Text>
+            <Text style={styles.button2Text}>Cakes</Text>
+            <Text style={styles.button2Text}>Cookies</Text>
+            <Text style={styles.button2Text}>Promotions</Text>
+        </View>
 
-    <Text style={styles.button2Text}>Cakes</Text>
-
-    <Text style={styles.button2Text}>Cookies</Text>
-
-    <Text style={styles.button2Text}>Promotions</Text>
-
-  </View>
-
-  <TextInput style={styles.textInput} placeholder={'Search'} />
+        <TextInput style={styles.textInput} placeholder={'Search'} />
 
 
-  <ScrollView vertical={true} showsVerticalScrollIndicator={false}>
-    <Animatable.View animation="slideInDown" style={{ height: 1000 }}>
-      <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 15 }}>
-        <TouchableOpacity style={styles.productview1} onPress={() => { navigation.navigate("ProductData") }}>
-          <Image style={styles.image} source={require("./../assets/IMG1.jpg")}/>
-
-          <View style={{ top: 0, alignItems: 'center' }}>
+        <ScrollView vertical={true} showsVerticalScrollIndicator={false}>
+            <Animatable.View animation="slideInDown" style={{ height: 1000 }}>
+              <View style={{ flexDirection: 'row', height: 150, width: '100%', justifyContent: 'space-evenly', marginBottom: 15 }}>
+                <TouchableOpacity style={styles.productview1} onPress={() => { navigation.navigate("ProductData") }}>
+                    <Image style={styles.image} source={require("./../assets/IMG1.jpg")}/>
+             <View style={{ top: 0, alignItems: 'center' }}>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>RED VELVET</Text>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>CAKE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: `#02c38e` }}>$</Text>99</Text>
+            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: `#02c38e` }}>$</Text>100</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.productview2} onPress={() => { navigation.navigate("ProductData") }}>
           <Image style={styles.image} source={require("./../assets/IMG2.jpg")}/>
-
-          <View style={{ top: 0, alignItems: 'center' }}>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>CHOCOLATE</Text>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>CAKE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: `#02c38e` }}>$</Text>65</Text>
-          </View>
+            <View style={{ top: 0, alignItems: 'center' }}>
+                <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>CHOCOLATE</Text>
+                <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>CAKE</Text>
+                <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: `#02c38e` }}>$</Text>85</Text>
+            </View>
         </TouchableOpacity>
       </View>
 
@@ -75,7 +66,7 @@ const home = () => {
       <View style={{ top: 0, alignItems: 'center' }}>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>VANILLA</Text>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>CAKE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: `#02c38e` }}>$</Text>80</Text>
+            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: `#02c38e` }}>$</Text>70</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.productview2}>
@@ -84,7 +75,7 @@ const home = () => {
           <View style={{ top: 0, alignItems: 'center' }}>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>CINAMMON</Text>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>CUPCAKE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>70</Text>
+            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>25</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -97,7 +88,7 @@ const home = () => {
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>VANILLA</Text>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }} onPress={() => {
               navigation.navigate("ProductData") }}>CUPCAKE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>119</Text>
+            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>36</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.productview2}>
@@ -106,7 +97,7 @@ const home = () => {
           <View style={{ top: 0, alignItems: 'center' }}>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>OAT</Text>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>COOKIE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: `#02c38e` }}>$</Text>60</Text>
+            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: `#02c38e` }}>$</Text>15</Text>
           </View>
         </TouchableOpacity>
 
@@ -118,7 +109,7 @@ const home = () => {
           <View style={{ top: 0, alignItems: 'center' }}>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>CHOCOLATE</Text>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>COOKIE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e'}}>$</Text>80</Text>
+            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e'}}>$</Text>20</Text>
           </View>
 
         </TouchableOpacity>
@@ -126,9 +117,9 @@ const home = () => {
         <Image style={styles.image} source={require("./../assets/IMG8.jpg")}/>
 
           <View style={{ top: 0, alignItems: 'center' }}>
-            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>CHOCOLATE GLAZED</Text>
+            <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>CHOCOLATE</Text>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>DONUT</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>70</Text>
+            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>20</Text>
           </View>
         </TouchableOpacity>
 
@@ -142,7 +133,7 @@ const home = () => {
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>JELLY</Text>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }} onPress={() => {
               navigation.navigate("ProductData")  }}>DONUTS</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>119</Text>
+            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>25</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.productview2}>
@@ -151,7 +142,7 @@ const home = () => {
           <View style={{ top: 0, alignItems: 'center' }}>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>BUTTERMILK</Text>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>PANCAKE</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>60</Text>
+            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>5</Text>
           </View>
         </TouchableOpacity>
     </View>       
@@ -165,7 +156,7 @@ const home = () => {
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>FRENCH</Text>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }} onPress={() => {
               navigation.navigate("ProductData")  }}>CROISSANT</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>119</Text>
+            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>10</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.productview2}>
@@ -174,7 +165,7 @@ const home = () => {
           <View style={{ top: 0, alignItems: 'center' }}>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray' }}>BACON-EGG</Text>
             <Text style={{ fontWeight: '600', fontSize: 16, color: 'gray', marginBottom: 5 }}>CROISSANT</Text>
-            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>60</Text>
+            <Text style={{ fontWeight: '700', fontSize: 20, marginBottom: -15 }}><Text style={{ color: '#02c38e' }}>$</Text>15</Text>
           </View>
         </TouchableOpacity> 
     </View>       
@@ -195,11 +186,9 @@ const home = () => {
     </View>
   </View>
 
-</ImageBackground>
-
-</View>
-        </View>
-        </ImageBackground>
+            </ImageBackground>
+        </SafeAreaView>
+        
     )
 }
 
@@ -207,8 +196,8 @@ export default home
 
 const styles = StyleSheet.create({
     imageBackground: {
-        flex: 1,
-        alignItems: 'center'
+        height: '100%',
+        alignItems: 'center',
       },
 
       img:{
@@ -225,7 +214,6 @@ const styles = StyleSheet.create({
       },
       container: {
         flex: 1,
-        padding: 18,
         backgroundColor: '#F8F8F8',
       },
       view3: {
@@ -303,7 +291,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         justifyContent: "space-around",
         alignItems: "center",
-        bottom: 25,
         height: 50,
         shadowColor: "gray",
         shadowOffset: {

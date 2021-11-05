@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
+import { Ionicons } from '@expo/vector-icons';
 import {
   StyleSheet,
   Text,
@@ -37,6 +38,7 @@ export default function login({navigation}) {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.inputView}>
+      <Ionicons name="mail-open" size={24} color="black" />
         <TextInput
           style={styles.TextInput}
           placeholder="Email."
@@ -46,6 +48,7 @@ export default function login({navigation}) {
       </View>
 
       <View style={styles.inputView}>
+      <Ionicons name="eye-off-outline" size={24} color="black" />    
         <TextInput
           style={styles.TextInput}
           placeholder="Password."
@@ -82,6 +85,8 @@ const styles = StyleSheet.create({
   },
 
   inputView: {
+    flexDirection: "row",
+    paddingLeft: 12,
     backgroundColor: "#66b2ff",
     borderRadius: 30,
     width: "100%",
