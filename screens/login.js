@@ -13,6 +13,7 @@ import {
   ImageBackground
 } from "react-native";
 import { screensEnabled } from "react-native-screens";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function login({navigation}) {
   const [email, setEmail] = useState(0);
@@ -34,6 +35,7 @@ export default function login({navigation}) {
   };
 
   return (
+    <SafeAreaView style={styles.mainContainer}>
     <ImageBackground style={styles.imageBackground} source={require("./../assets/splash.jpg")}>
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -67,6 +69,7 @@ export default function login({navigation}) {
       </TouchableOpacity>
     </View>
     </ImageBackground>
+    </SafeAreaView>
   );
 }
 
@@ -76,7 +79,10 @@ const styles = StyleSheet.create({
     margin: 20,
     alignItems: "center",
   },
-
+  mainContainer: {
+    flex: 1,
+    backgroundColor: '#F8F8F8',
+  },
 
   imageBackground: {
     flex: 1,

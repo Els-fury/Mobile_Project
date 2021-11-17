@@ -1,8 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, View , Image, TouchableOpacity, ImageBackground} from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const splash_start = ({navigation}) => {
     return (
+        <SafeAreaView style={styles.mainContainer}>
         <ImageBackground style={styles.imageBackground} source={require("./../assets/splash.jpg")}>
             <View style={styles.container}>
                 <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate("Login")}>
@@ -13,6 +15,7 @@ const splash_start = ({navigation}) => {
                 </TouchableOpacity>
             </View>
         </ImageBackground>
+        </SafeAreaView>
     )
 }
 
@@ -24,6 +27,10 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         width: '100%'
     },
+    mainContainer: {
+        flex: 1,
+        backgroundColor: '#F8F8F8',
+      },
     welcomeText: {
         fontStyle: "italic",    
         position: "relative",

@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const productpage = () => {
+const cart = () => {
     return (
         <View>
             <Text></Text>
@@ -9,6 +9,6 @@ const productpage = () => {
     )
 }
 
-export default productpage
+export default cart
 
 const styles = StyleSheet.create({})
