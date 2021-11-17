@@ -12,6 +12,7 @@ export default function productpage1({navigation}) {
 
 
       <Animatable.View animation="fadeInDownBig" style={{ height: '35%', width: '100%', borderRadius: 25, marginBottom: 15, backgroundColor: 'lightgray', padding: 10 }}>
+       
         <View style={{ paddingTop: 45, paddingRight: 10, paddingLeft: 10 }}>
           <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
             <Ionicons name="home-outline" size={30} color="#484848" onPress={() => {navigation.navigate("Home")}} />
@@ -19,10 +20,12 @@ export default function productpage1({navigation}) {
               <Ionicons name="cart-outline" size={30} color="#484848" onPress={() => {navigation.navigate("cart")  }} />
             </View>
           </View>
+          
         </View>
-        <View style={styles.glassesView1}>
-            <Image style={styles.image} source={require("./../assets/IMG1.jpg")}/>
-        </View>
+<View style={styles.productView1}>
+              <Image style={styles.image} source={require("./../assets/IMG1.jpg")}/>
+          </View>
+       
       </Animatable.View>
 
       <View style={{ padding: 20 }}>
@@ -143,7 +146,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: 'space-between',
   },
-  glassesView1: {
+  productView1: {
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -180,4 +183,12 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 20,
   },
+
+  image: {
+    
+    height:1118,
+    width: 745,
+    
+  },
+
 })

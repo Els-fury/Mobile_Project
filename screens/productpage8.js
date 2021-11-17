@@ -20,7 +20,7 @@ export default function productpage8({navigation}) {
             </View>
           </View>
         </View>
-        <View style={styles.glassesView1}>
+        <View style={styles.productView1}>
             <Image style={styles.image} source={require("./../assets/IMG8.jpg")}/>
         </View>
       </Animatable.View>
@@ -28,19 +28,12 @@ export default function productpage8({navigation}) {
       <View style={{ padding: 20 }}>
 
         <View style={{ flexDirection: "row", justifyContent: "space-between", width: '100%' }}>
-          <View style={{ flexDirection: 'column' }}>
+          <View style={{ flexDirection: 'column', width:150, height:55, backgroundColor: "white" }}>
             <Text style={{ fontWeight: '400', fontSize: 28, color: 'black' }}>CHOCOLATE</Text>
             <Text style={{ fontWeight: '200', marginBottom: 15, fontSize: 28 }}>DONUT</Text>
 
           </View>
-          <View style={{ flexDirection: 'column', alignItems: 'center', }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: 30, marginBottom: 5 }}>
-              <TouchableOpacity style={{ backgroundColor: "#3b393a", width: 31, height: 31, borderRadius: 5 }}></TouchableOpacity>
-            </View>
-
-            <Text style={{ fontSize: 17, fontWeight: '500', color: 'gray', marginBottom: 7 }}>Colors Available</Text>
-
-          </View>
+          
 
 
         </View>
@@ -62,7 +55,7 @@ export default function productpage8({navigation}) {
         </View>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
 
-          <Text style={{ fontSize: 17, fontWeight: '500', color: 'gray', marginBottom: 7 }}>Sizes Available</Text>
+          <Text style={{ fontSize: 17, fontWeight: '500', color: 'gray', marginBottom: 7 }}>Pieces Available</Text>
 
           <Text style={{ fontSize: 17, fontWeight: '500', color: 'gray' }}>Ratings</Text>
 
@@ -73,8 +66,8 @@ export default function productpage8({navigation}) {
 
           <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '35%' }}>
 
-            <TouchableOpacity style={styles.sizeContainer}><Text style={styles.sizeText}>R</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.sizeContainer}><Text style={styles.sizeText}>L</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.sizeContainer}><Text style={styles.sizeText}>6</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.sizeContainer}><Text style={styles.sizeText}>12</Text></TouchableOpacity>
 
           </View>
 
@@ -92,12 +85,11 @@ export default function productpage8({navigation}) {
         <View style={{ height: '27%', width: '100%', borderRadius: '10', marginBottom: 35 }}>
           <Text style={{ fontSize: 18, fontWeight: '500', color: 'gray', marginBottom: 8 }}>Item Description</Text>
 
-          <View style={{ width: '100%', marginBottom: 5 }}>
+          <View style={{ width: '100%', marginBottom: 5, width:280, height:80, backgroundColor: "white"}}>
 
-            <Text style={{ fontSize: 21, fontWeight: '400', color: 'black', marginBottom: 3 }}>Sizes  are 'Medium and Large'</Text>
-            <Text style={{ fontSize: 21, fontWeight: '400', color: 'black', marginBottom: 3 }}>Manufactured by Lormy's Confectionery</Text>
-            <Text style={{ fontSize: 21, fontWeight: '400', color: 'black', marginBottom: 3 }}>Made in Ghana</Text>
-            <Text style={{ fontSize: 21, fontWeight: '400', color: 'black', marginBottom: 3 }}>It is one of the top-selling products in the market</Text>
+            <Text style={{ fontSize: 21, fontWeight: '400', color: 'black', marginBottom: 3 }}>Pieces are '6 pieces and 12pieces'</Text>
+            <Text style={{ fontSize: 21, fontWeight: '400', color: 'black', marginBottom: 3 }}>Baked by Lormy's Confectionery</Text>
+            <Text style={{ fontSize: 21, fontWeight: '400', color: 'black', marginBottom: 3 }}>It is a of the top-selling product.</Text>
 
           </View>
         </View>
@@ -146,7 +138,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: 'space-between',
   },
-  glassesView1: {
+  productView1: {
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -181,5 +173,10 @@ const styles = StyleSheet.create({
   sizeText: {
     fontWeight: '600',
     fontSize: 20,
+  },
+
+  image: {
+    height:900,
+    width: 400,
   },
 })

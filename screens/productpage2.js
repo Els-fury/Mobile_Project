@@ -20,7 +20,7 @@ export default function productpage2({navigation}) {
             </View>
           </View>
         </View>
-        <View style={styles.glassesView1}>
+        <View style={styles.productView1}>
             <Image style={styles.image} source={require("./../assets/IMG2.jpg")}/>
         </View>
       </Animatable.View>
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent: 'space-between',
   },
-  glassesView1: {
+  productView1: {
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -173,5 +173,10 @@ const styles = StyleSheet.create({
   sizeText: {
     fontWeight: '600',
     fontSize: 20,
+  },
+
+  image: {
+    height:900,
+    width: 400,
   },
 })
